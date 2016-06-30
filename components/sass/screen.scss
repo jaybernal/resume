@@ -1,0 +1,274 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "bourbon";
+@import "bourbon", "neat";
+@import "variables";
+@import "compass/css3";
+
+body {
+  font: $mainFont;
+  background: $lightSection; 
+  color: $textColor;
+}
+
+#{headings()} {
+  font: $headFont;
+  color: $headColor;
+  font-weight: $bold;
+}
+
+h2{
+  color: $darkGreen;
+  font-size: 2em;
+  font-weight: $heavy;
+  line-height: 2em;
+  @include text-shadow($darkSection 0 0 10px);
+  text-align: center;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+p{
+  font-weight: $thin;
+  padding-bottom: 10px;
+}
+
+/*body*/
+
+body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  position: relative;
+  padding: 20px 0;
+}
+
+/*Hero Page*/
+
+header{
+  animation: colorchange 50s;
+  @keyframes colorchange {
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+  }
+  
+  /*Chevron*/
+  .chevron {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    background: $brown;
+    border-radius: 64px;
+  }
+  .chevron:before {
+    transition: all 0.2s ease-in-out !important;
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(-5px) rotate(40deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .chevron:after {
+    transition: all 0.2s ease-in-out !important;
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(5px) rotate(-40deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .chevron:hover:before {
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(5px) rotate(40deg);
+  }
+  .chevron:hover:after {
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(-5px) rotate(-40deg);
+    position: absolute;
+  }
+
+  .title-container{
+    padding: 100px 0;
+
+    h1{
+      color: $lightSection;
+      font-size: 3em;
+      font-weight: $heavy;
+      line-height: 3em;
+      @include text-shadow($darkSection 0 0 10px);
+      text-align: center;
+    }
+  }
+}
+
+header #nav{
+  @include background-image(linear-gradient(top, lighten($darkGreen, 10), $darkGreen));
+  @include clearfix;
+  width: 100%;
+  z-index: 100;
+
+  .navbar ul{
+    margin: auto;
+    display: flex;
+    width: 50%;
+
+    li{
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+  } /* Navbar ul*/
+  li a{
+    text-decoration: none;
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: 2px;
+    font-size: 1em;
+    padding: 10px 10px 10px 45px;
+
+    &.about {background-image: url("../images/icons/about.png");}
+    &.experiences {background-image: url("../images/icons/experiences.png");}
+    &.education {background-image: url("../images/icons/education.png");}
+    &.abilities {background-image: url("../images/icons/abilities.png");}
+
+    &:hover{
+      background-color: $lightBlue;
+      color: yellow;
+    }
+  }
+}
+
+/*ABOUT ME*/
+
+#about-me{
+  padding: 0 0 1em 1em;
+  h3{
+    text-align: center;
+    padding-bottom: 3em;
+  }/*H3*/
+
+  @include outer-container;
+  .about-me-info{ @include span-columns(6);}
+  .main-photo{@include span-columns(6);}
+
+  .social-media{
+    ul{
+      display: flex;
+      li{
+        padding-right: 1em;
+      }
+    }/*ul*/
+  }/*social media*/
+
+  .about-me-info {
+    h4, p, ul {
+      padding-bottom: 1em;
+      line-height: 1.5em;
+    }
+    .contact-info ul li{
+      padding-bottom: .5em;
+    }
+  } /*about-me-info*/
+}/*about-me*/
+
+
+
+/*Experiences*/
+#experiences{
+  .work-container{
+    h2{
+      padding-bottom: 1.5em;
+    }/*h2*/
+  }/*work-container*/
+  @include outer-container;
+  .work-detail{@include span-columns(3);}
+  .work-description{@include span-columns(9);}
+
+  ul, h4, p{
+    padding-bottom: 1em;
+    line-height: 1.5em;
+  }
+
+}
+
+
+/*Education*/
+#education{
+  h2{
+    padding-bottom: 1.5em;
+  }/*h2*/
+
+  @include outer-container;
+    .education-detail{@include span-columns(3);}
+    .education-description{@include span-columns(9);}
+
+    ul, h4, p{
+    padding-bottom: 1em;
+    line-height: 1.5em;
+  }
+}
+
+/*Abilities*/
+#abilities{
+  h2{
+    padding-bottom: 1em;
+  }/*h2*/
+  @include outer-container;
+
+  .languages{
+    padding-bottom: 2em;
+  }
+  p{
+    padding-bottom: 0;
+  }
+  h4, progress{
+    padding-bottom:  2em;
+  }
+  
+  progress[value] {
+    height: 1.5em;
+    width: 50em;
+  }
+}
+
+
+

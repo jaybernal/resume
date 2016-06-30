@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400);
+
+@inclue border-box-sizing; /*using border box sizing like the old IE*/
+
+/*Add Color Palette*/
+
+$brown              : #302C29;
+$ivory              : #D1D1BC;
+$lightBlue          : #A7C4BB;
+$green              : #6C8C84;
+$darkGreen          : #466964;
+
+$backgroundColor    : $lightBlue;
+$textColor          : $brown;
+$darkSection        : $green;
+$lightSection       : $ivory;
+
+
+/*Font Variables*/
+$largeFont          : 'Lato';
+$normalFont         : 'Merriweather';
+$headColor           : $darkGreen;
+
+$thin               :300;
+$normal             :400;
+$bold               :700;
+$heavy              :900;
+
+
+$headFont           :thin 1.5em/1.5em $largeFont;
+$mainFont           :thin 1em/1.5em $normalFont;
+
+
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;

@@ -1,0 +1,1 @@
+$(function(){var e=new ScrollMagic.Controller({globalSceneOptions:{tiggerHook:"onLeave"}}),n=new ScrollMagic.Scene({triggerElement:"#nav"}).setPin("#nav").addTo(e)});

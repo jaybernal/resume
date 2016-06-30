@@ -1,0 +1,346 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@inclue border-box-sizing;
+/*using border box sizing like the old IE*/
+/*Add Color Palette*/
+/*Font Variables*/
+body {
+  font: thin 1em/1.5em "Merriweather";
+  background: #D1D1BC;
+  color: #302C29; }
+
+h1, h2, h3, h4, h5, h6 {
+  font: thin 1.5em/1.5em "Lato";
+  color: #466964;
+  font-weight: 700; }
+
+h2 {
+  color: #466964;
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 2em;
+  text-shadow: #6C8C84 0 0 10px;
+  text-align: center; }
+
+strong {
+  font-weight: 700; }
+
+p {
+  font-weight: 300;
+  padding-bottom: 10px; }
+
+/*body*/
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.scene {
+  position: relative;
+  padding: 20px 0; }
+
+/*Hero Page*/
+header {
+  animation: colorchange 50s;
+  /*Chevron*/ }
+@keyframes colorchange {
+  0% {
+    background: red; }
+  25% {
+    background: yellow; }
+  50% {
+    background: blue; }
+  75% {
+    background: green; }
+  100% {
+    background: red; } }
+  header .chevron {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    background: #302C29;
+    border-radius: 64px; }
+  header .chevron:before {
+    transition: all 0.2s ease-in-out !important;
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(-5px) rotate(40deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; }
+  header .chevron:after {
+    transition: all 0.2s ease-in-out !important;
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(5px) rotate(-40deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; }
+  header .chevron:hover:before {
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(5px) rotate(40deg); }
+  header .chevron:hover:after {
+    content: "";
+    display: inline-block;
+    background: black;
+    width: 2px;
+    height: 16px;
+    border-radius: 16px;
+    transform: translateX(-5px) rotate(-40deg);
+    position: absolute; }
+  header .title-container {
+    padding: 100px 0; }
+    header .title-container h1 {
+      color: #D1D1BC;
+      font-size: 3em;
+      font-weight: 900;
+      line-height: 3em;
+      text-shadow: #6C8C84 0 0 10px;
+      text-align: center; }
+
+header #nav {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVhODg4MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ2Njk2NCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5a8881), color-stop(100%, #466964));
+  background-image: -moz-linear-gradient(top, #5a8881, #466964);
+  background-image: -webkit-linear-gradient(top, #5a8881, #466964);
+  background-image: linear-gradient(to bottom, #5a8881, #466964);
+  width: 100%;
+  z-index: 100;
+  /* Navbar ul*/ }
+  header #nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header #nav .navbar ul {
+    margin: auto;
+    display: flex;
+    width: 50%; }
+    header #nav .navbar ul li {
+      display: flex;
+      width: 100%;
+      justify-content: space-around; }
+  header #nav li a {
+    text-decoration: none;
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: 2px;
+    font-size: 1em;
+    padding: 10px 10px 10px 45px; }
+    header #nav li a.about {
+      background-image: url("../images/icons/about.png"); }
+    header #nav li a.experiences {
+      background-image: url("../images/icons/experiences.png"); }
+    header #nav li a.education {
+      background-image: url("../images/icons/education.png"); }
+    header #nav li a.abilities {
+      background-image: url("../images/icons/abilities.png"); }
+    header #nav li a:hover {
+      background-color: #A7C4BB;
+      color: yellow; }
+
+/*ABOUT ME*/
+#about-me {
+  padding: 0 0 1em 1em;
+  /*H3*/
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  /*social media*/
+  /*about-me-info*/ }
+  #about-me h3 {
+    text-align: center;
+    padding-bottom: 3em; }
+  #about-me::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #about-me .about-me-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #about-me .about-me-info:last-child {
+      margin-right: 0; }
+  #about-me .main-photo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #about-me .main-photo:last-child {
+      margin-right: 0; }
+  #about-me .social-media {
+    /*ul*/ }
+    #about-me .social-media ul {
+      display: flex; }
+      #about-me .social-media ul li {
+        padding-right: 1em; }
+  #about-me .about-me-info h4, #about-me .about-me-info p, #about-me .about-me-info ul {
+    padding-bottom: 1em;
+    line-height: 1.5em; }
+  #about-me .about-me-info .contact-info ul li {
+    padding-bottom: .5em; }
+
+/*about-me*/
+/*Experiences*/
+#experiences {
+  /*work-container*/
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #experiences .work-container {
+    /*h2*/ }
+    #experiences .work-container h2 {
+      padding-bottom: 1.5em; }
+  #experiences::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #experiences .work-detail {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #experiences .work-detail:last-child {
+      margin-right: 0; }
+  #experiences .work-description {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    #experiences .work-description:last-child {
+      margin-right: 0; }
+  #experiences ul, #experiences h4, #experiences p {
+    padding-bottom: 1em;
+    line-height: 1.5em; }
+
+/*Education*/
+#education {
+  /*h2*/
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #education h2 {
+    padding-bottom: 1.5em; }
+  #education::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #education .education-detail {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #education .education-detail:last-child {
+      margin-right: 0; }
+  #education .education-description {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    #education .education-description:last-child {
+      margin-right: 0; }
+  #education ul, #education h4, #education p {
+    padding-bottom: 1em;
+    line-height: 1.5em; }
+
+/*Abilities*/
+#abilities {
+  /*h2*/
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #abilities h2 {
+    padding-bottom: 1em; }
+  #abilities::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #abilities .languages {
+    padding-bottom: 2em; }
+  #abilities p {
+    padding-bottom: 0; }
+  #abilities h4, #abilities progress {
+    padding-bottom: 2em; }
+  #abilities progress[value] {
+    height: 1.5em;
+    width: 50em; }
