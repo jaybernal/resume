@@ -218,6 +218,10 @@ header #nav {
       background-color: #A7C4BB;
       color: yellow; }
 
+.active1 {
+  background-color: red;
+  color: white; }
+
 /*ABOUT ME*/
 #about-me {
   padding: 0 0 1em 1em;
@@ -262,34 +266,34 @@ header #nav {
 
 /*about-me*/
 /*Experiences*/
-#experiences {
+#experiences-page {
   /*work-container*/
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  #experiences .work-container {
+  #experiences-page .work-container {
     /*h2*/ }
-    #experiences .work-container h2 {
+    #experiences-page .work-container h2 {
       padding-bottom: 1.5em; }
-  #experiences::after {
+  #experiences-page::after {
     clear: both;
     content: "";
     display: table; }
-  #experiences .work-detail {
+  #experiences-page .work-detail {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    #experiences .work-detail:last-child {
+    #experiences-page .work-detail:last-child {
       margin-right: 0; }
-  #experiences .work-description {
+  #experiences-page .work-description {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%; }
-    #experiences .work-description:last-child {
+    #experiences-page .work-description:last-child {
       margin-right: 0; }
-  #experiences ul, #experiences h4, #experiences p {
+  #experiences-page ul, #experiences-page h4, #experiences-page p {
     padding-bottom: 1em;
     line-height: 1.5em; }
 

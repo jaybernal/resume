@@ -177,6 +177,11 @@ header #nav{
   }
 }
 
+.active1{
+  background-color: red;
+  color: white;
+}
+
 /*ABOUT ME*/
 
 #about-me{
@@ -213,7 +218,7 @@ header #nav{
 
 
 /*Experiences*/
-#experiences{
+#experiences-page{
   .work-container{
     h2{
       padding-bottom: 1.5em;
