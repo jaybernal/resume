@@ -344,3 +344,8 @@ header #nav {
   #abilities progress[value] {
     height: 1.5em;
     width: 50em; }
+
+/*footer*/
+#footer-icons {
+  display: flex;
+  justify-content: center; }
