@@ -7,6 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+
+
 </head>
 
 
@@ -15,14 +18,15 @@
     <article class="fullheight">
       <div class="title-container">
         <h1 class="header-text">Jay Bernal's Resume Page</h1>
-        <div class="chevron"> </div>
+<!--         <p class="chevron"><a href="#about-page"></a></p>
+ -->   
       </div>
     </article>
 
     <nav id="nav">
       <div class="navbar">
         <ul>
-          <li><a class="icon about active1" href="#about-page"><span>Me</span></a></li>
+          <li><a class="icon about" href="#about-page"><span>Me</span></a></li>
           <li><a class="icon experiences" href="#experiences-page"><span>Experiences</span></a></li>
           <li><a class="icon education" href="#education-page"><span>Education</span></a></li>
           <li><a class="icon abilities" href="#abilities-page"><span>Abilities</span></a></li>
@@ -185,29 +189,21 @@
         <h2 id="abilities-page">Abilities</h2>
 
         <div class="languages">
-          <h4 class="" >Structuring and Styling Languages</h4>
-          <p class="">HTML & CSS</p>
-          <progress id="progress-bar" max="100" value="80"></progress>
-          <p class="">JavaScript & JQuery</p>
-          <progress max="100" value="50"></progress>
-          <p>WordPress</p>
-          <progress max="100" value="50"></progress>
-          <p class="">Bootstrap & Bourbon</p>
-          <progress max="100" value="50"></progress>
+          <h4 class="" >Front End Frameworks</h4>
+            <div class="chart" data-percent="80">HTML5</div>
+            <div class="chart" data-percent="60">CSS3/SASS</div>
+            <div class="chart" data-percent="50">jQuery</div>
+            <div class="chart" data-percent="55">WordPress</div>
+            <div class="chart" data-percent="70">Bootstrap</div>
+
         </div>
 
         <div class="languages">
-          <h4 class="">Programming Languages & Frameworks</h4>
-          <p class="">Ruby</p>
-          <progress max="100" value="60"></progress>
-          <p class="">PHP</p>
-          <progress max="100" value="40"></progress>
-          <p class="">Ruby on Rails</p>
-          <progress max="100" value="55"></progress>
-          <p class="">MySql</p>
-          <progress max="100" value="20"></progress>
-          <p class="">Git & GitHub</p>
-          <progress max="100" value="80"></progress>
+          <h4 class="">Backend</h4>
+            <div class="chart" data-percent="70">Ruby/Rails</div>
+            <div class="chart" data-percent="50">JavaScript</div>
+            <div class="chart" data-percent="40">PHP</div>
+            <div class="chart" data-percent="80">Git & GitHub</div>
         </div>
 
       </article>
@@ -233,6 +229,14 @@
   </footer>
 
   <script src="development/scripts/scripts.js"> </script>
+
+
+
+
+
+
+
+
 
 
 

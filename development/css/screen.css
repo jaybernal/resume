@@ -218,7 +218,7 @@ header #nav {
       background-color: #A7C4BB;
       color: yellow; }
 
-.active1 {
+.active {
   background-color: red;
   color: white; }
 
@@ -346,10 +346,23 @@ header #nav {
   #abilities h4, #abilities progress {
     padding-bottom: 2em; }
   #abilities progress[value] {
-    height: 1.5em;
+    height: 3em;
     width: 50em; }
 
 /*footer*/
 #footer-icons {
   display: flex;
   justify-content: center; }
+
+.chart {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px;
+  color: #999;
+  font-size: 14px;
+  text-align: center; }
+
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0; }

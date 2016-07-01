@@ -1,7 +1,7 @@
 
 
 $(function() {
-  var topoffset = 43;
+  var topoffset = 36;
   var controller = new ScrollMagic.Controller({
     globalSceneOptions: {
       triggerHook: "onLeave"
@@ -21,15 +21,43 @@ $(function() {
     }
   });
 
-  $(window).scroll(function(){
-    var windowpos = $(window).scrollTop + topoffset;
-    $("nav li a").removeClass("active");
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop() + topoffset;
+    $('nav li a').removeClass('active');
 
-    if (windowpos > $("about-me").offset().top) {
-      $("nav la a").removeClass("active");
-      $('a[href$="about-me"]').addClass("active");
+    if (windowpos > $('#about-page').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#about-page"]').addClass('active');
+    }
+    if (windowpos > $('#experiences-page').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#experiences-page"]').addClass('active');
+    }
+    if (windowpos > $('#education-page').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#education-page"]').addClass('active');
+    }
+    if (windowpos > $('#abilities-page').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#abilities-page"]').addClass('active');
     }
   });
+
+
+
+  $('.chart').easyPieChart({
+    scaleColor: false,
+    lineWidth: 20,
+    lineCap: 'butt',
+    barColor: '#1abc9c',
+    trackColor: "#ecf0f1",
+    size: 150,
+    animate: 600
+  });
+
+
+
+
 
 
   var scene = new ScrollMagic.Scene({triggerElement: "#nav"})
