@@ -261,6 +261,10 @@ header #nav{
 
   .languages{
     padding-bottom: 2em;
+    margin: auto;
+    h4{
+      text-align: center;
+    }
   }
   p{
     padding-bottom: 0;
@@ -272,6 +276,21 @@ header #nav{
   progress[value] {
     height: 3em;
     width: 50em;
+  }
+  .front-end{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+
+    h4{
+      font-weight: $bold;
+      font: $mainFont;
+    }
+    
+    .pie p{
+      text-align: center;
+      font-weight: $normal;
+    }
   }
 }
 

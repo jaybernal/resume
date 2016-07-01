@@ -340,7 +340,10 @@ header #nav {
     content: "";
     display: table; }
   #abilities .languages {
-    padding-bottom: 2em; }
+    padding-bottom: 2em;
+    margin: auto; }
+    #abilities .languages h4 {
+      text-align: center; }
   #abilities p {
     padding-bottom: 0; }
   #abilities h4, #abilities progress {
@@ -348,6 +351,16 @@ header #nav {
   #abilities progress[value] {
     height: 3em;
     width: 50em; }
+  #abilities .front-end {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em; }
+    #abilities .front-end h4 {
+      font-weight: 700;
+      font: thin 1em/1.5em "Merriweather"; }
+    #abilities .front-end .pie p {
+      text-align: center;
+      font-weight: 400; }
 
 /*footer*/
 #footer-icons {
