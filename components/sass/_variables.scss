@@ -37,3 +37,6 @@ $narrow: 400px;
 $small: 650px;
 $medium: 960px;
 $wide: 1200px;
+
+$mobile: new-breakpoint(max-width 400px);
+$desktop: new-breakpoint(min-width 960px);

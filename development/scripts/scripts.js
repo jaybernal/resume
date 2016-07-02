@@ -44,7 +44,6 @@ $(function() {
   });
 
 
-
   $('.chart').easyPieChart({
     scaleColor: false,
     lineWidth: 20,
@@ -55,14 +54,13 @@ $(function() {
     animate: 600
   });
 
-
-
-
-
-
   var scene = new ScrollMagic.Scene({triggerElement: "#nav"})
     .setPin("#nav")
     .addTo(controller);
 
   });
+  
+
+
+
 

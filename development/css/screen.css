@@ -65,7 +65,9 @@ html {
 body {
   font: thin 1em/1.5em "Merriweather";
   background: #D1D1BC;
-  color: #302C29; }
+  color: #302C29;
+  padding-left: 1em;
+  padding-right: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
   font: thin 1.5em/1.5em "Lato";
@@ -238,20 +240,41 @@ header #nav {
     clear: both;
     content: "";
     display: table; }
-  #about-me .about-me-info {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    #about-me .about-me-info:last-child {
-      margin-right: 0; }
-  #about-me .main-photo {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    #about-me .main-photo:last-child {
-      margin-right: 0; }
+  @media screen and (max-width: 400px) {
+    #about-me .about-me-info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%; }
+      #about-me .about-me-info:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #about-me .about-me-info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%; }
+      #about-me .about-me-info:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 400px) {
+    #about-me .main-photo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%; }
+      #about-me .main-photo:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #about-me .main-photo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 57.35098%; }
+      #about-me .main-photo:last-child {
+        margin-right: 0; } }
+  #about-me .main-photo img {
+    width: 100%;
+    height: 100%; }
   #about-me .social-media {
     /*ul*/ }
     #about-me .social-media ul {
@@ -279,20 +302,38 @@ header #nav {
     clear: both;
     content: "";
     display: table; }
-  #experiences-page .work-detail {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    #experiences-page .work-detail:last-child {
-      margin-right: 0; }
-  #experiences-page .work-description {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    #experiences-page .work-description:last-child {
-      margin-right: 0; }
+  @media screen and (max-width: 400px) {
+    #experiences-page .work-detail {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #experiences-page .work-detail:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #experiences-page .work-detail {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      #experiences-page .work-detail:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 400px) {
+    #experiences-page .work-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #experiences-page .work-description:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #experiences-page .work-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      #experiences-page .work-description:last-child {
+        margin-right: 0; } }
   #experiences-page ul, #experiences-page h4, #experiences-page p {
     padding-bottom: 1em;
     line-height: 1.5em; }
@@ -309,20 +350,38 @@ header #nav {
     clear: both;
     content: "";
     display: table; }
-  #education .education-detail {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    #education .education-detail:last-child {
-      margin-right: 0; }
-  #education .education-description {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    #education .education-description:last-child {
-      margin-right: 0; }
+  @media screen and (max-width: 400px) {
+    #education .education-detail {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      #education .education-detail:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #education .education-detail {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      #education .education-detail:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 400px) {
+    #education .education-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #education .education-description:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 960px) {
+    #education .education-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      #education .education-description:last-child {
+        margin-right: 0; } }
   #education ul, #education h4, #education p {
     padding-bottom: 1em;
     line-height: 1.5em; }
@@ -352,15 +411,28 @@ header #nav {
     height: 3em;
     width: 50em; }
   #abilities .front-end {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between;
     padding-bottom: 2em; }
+    #abilities .front-end::after {
+      clear: both;
+      content: "";
+      display: table; }
     #abilities .front-end h4 {
       font-weight: 700;
       font: thin 1em/1.5em "Merriweather"; }
     #abilities .front-end .pie p {
       text-align: center;
-      font-weight: 400; }
+      font-weight: 400;
+      /*@include media($mobile) {
+      @include span-columns(3);
+      }
+      @include media($desktop) {
+      @include span-columns(6);
+      }*/ }
 
 /*footer*/
 #footer-icons {

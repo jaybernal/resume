@@ -13,6 +13,8 @@ body {
   font: $mainFont;
   background: $lightSection; 
   color: $textColor;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 #{headings()} {
@@ -192,8 +194,27 @@ header #nav{
   }/*H3*/
 
   @include outer-container;
-  .about-me-info{ @include span-columns(6);}
-  .main-photo{@include span-columns(6);}
+  .about-me-info{ 
+    @include media($mobile) {
+    @include span-columns(11);
+  }
+    @include media($desktop) {
+    @include span-columns(5);
+  }
+}
+  .main-photo{
+    @include media($mobile) {
+    @include span-columns(11);
+  }
+    @include media($desktop) {
+    @include span-columns(7);
+  }
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .social-media{
     ul{
@@ -213,20 +234,37 @@ header #nav{
       padding-bottom: .5em;
     }
   } /*about-me-info*/
+
 }/*about-me*/
 
 
 
 /*Experiences*/
 #experiences-page{
+
   .work-container{
     h2{
       padding-bottom: 1.5em;
     }/*h2*/
   }/*work-container*/
+  
   @include outer-container;
-  .work-detail{@include span-columns(3);}
-  .work-description{@include span-columns(9);}
+  .work-detail{
+    @include media($mobile){
+    @include span-columns(12);
+  }
+    @include media($desktop){
+    @include span-columns(3)
+  }
+}
+  .work-description{
+    @include media($mobile){
+    @include span-columns(12);
+  }
+    @include media($desktop){ 
+    @include span-columns(9);
+  }
+}
 
   ul, h4, p{
     padding-bottom: 1em;
@@ -243,8 +281,35 @@ header #nav{
   }/*h2*/
 
   @include outer-container;
-    .education-detail{@include span-columns(3);}
-    .education-description{@include span-columns(9);}
+
+    .education-detail {
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+      @include media($desktop) {
+        @include span-columns(3);
+      }
+    }
+
+    .education-description {
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      @include media($desktop) {
+        @include span-columns(9);
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     ul, h4, p{
     padding-bottom: 1em;
@@ -278,6 +343,7 @@ header #nav{
     width: 50em;
   }
   .front-end{
+    @include outer-container;
     display: flex;
     justify-content: space-between;
     padding-bottom: 2em;
@@ -290,6 +356,12 @@ header #nav{
     .pie p{
       text-align: center;
       font-weight: $normal;
+      /*@include media($mobile) {
+      @include span-columns(3);
+      }
+      @include media($desktop) {
+      @include span-columns(6);
+      }*/
     }
   }
 }
