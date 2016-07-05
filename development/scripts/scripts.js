@@ -25,19 +25,19 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#about-page').offset().top) {
+    if (windowpos > $('#about-page').offset().top - 5) {
       $('nav li a').removeClass('active');
       $('a[href$="#about-page"]').addClass('active');
     }
-    if (windowpos > $('#experiences-page').offset().top) {
+    if (windowpos > $('#experiences-page').offset().top - 5) {
       $('nav li a').removeClass('active');
       $('a[href$="#experiences-page"]').addClass('active');
     }
-    if (windowpos > $('#education-page').offset().top) {
+    if (windowpos > $('#education-page').offset().top - 5) {
       $('nav li a').removeClass('active');
       $('a[href$="#education-page"]').addClass('active');
     }
-    if (windowpos > $('#abilities-page').offset().top) {
+    if (windowpos > $('#abilities-page').offset().top - 5) {
       $('nav li a').removeClass('active');
       $('a[href$="#abilities-page"]').addClass('active');
     }
